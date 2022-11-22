@@ -1,0 +1,23 @@
+<!-- b) Input: A number n obtained using prompt 
+    Output: Factorial of n number using alert -->
+
+<html>
+  <head>
+    <title>Factorial</title>
+    <script type="text/javascript">
+      function factorialcalc() {
+        var number = prompt("Enter a number");
+        var factorial = 1;
+        for (i = 1; i <= number; i++) {
+          factorial = factorial * i;
+        }
+        alert("The factorial of " + number + " is " + factorial);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="frm">
+      <input type="button" value="factorial" onclick="factorialcalc();" />
+    </form>
+  </body>
+</html>

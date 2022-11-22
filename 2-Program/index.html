@@ -1,0 +1,30 @@
+<!-- Write an HTML page that has one input, which can take multi line text and a submit button. Once the user clicks the submit button, it should show the number of characters, words and lines in the text entered using an alert message. Words are separated with white space and lines are separated with new line character. -->
+
+<html>
+  <head>
+    <title>Word,character,line calculator</title>
+    <script type="text/javascript">
+      function countWCL() {
+        var textarea = document.getElementById("tarea");
+        var text = textarea.value;
+        value =
+          "Words: " +
+          (text.split(/\b\S+\b/).length - 1) +
+          " Characters: " +
+          text.replace(/\s/g, "").length +
+          "/" +
+          text.replace(/\n/g, "").length +
+          "lines:" +
+          text.split("\n").length;
+        alert(value);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="cwl">
+      Enter Multi Line Text <br />
+      <textarea name="string" id="tarea" rows="4" cols="30"></textarea>
+      <input type="button" name="sub" value="count" onClick="countWCL()" />
+    </form>
+  </body>
+</html>
